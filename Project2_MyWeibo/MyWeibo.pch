@@ -1,0 +1,90 @@
+//
+//  MyWeibo.pch
+//  Project2_MyWeibo
+//
+//  Created by imac on 15/9/11.
+//  Copyright (c) 2015年 imac. All rights reserved.
+//
+
+#ifndef Project2_MyWeibo_MyWeibo_pch
+#define Project2_MyWeibo_MyWeibo_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+
+/**将下面注释取消，并定义自己的app key，app secret以及授权跳转地址uri
+ 此demo即可编译运行**/
+
+//#define kAppKey             @"330088177"
+//#define kAppSecret          @"195978d3e3db87e3f0a54133c264d46b"
+
+#define kAppKey             @"1203777981"
+#define kAppSecret          @"ab4200f981b6e9e25ad92b99c306e1aa"
+
+#define kAppRedirectURI     @"http://www.iphonetrain.com"
+
+#ifndef kAppKey
+#error
+#endif
+
+#ifndef kAppSecret
+#error
+#endif
+
+#ifndef kAppRedirectURI
+#error
+#endif
+
+//获取屏幕的物理尺寸
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define kThemeChange @"themeChange"//主题切换通知名称
+
+//大小图模式切换
+#define kWeiboImgWidth ([[[NSUserDefaults standardUserDefaults] objectForKey:@"indexPic"] floatValue] == 0 ? 100.0 : 200.0 )
+#define home_timeline  @"statuses/home_timeline.json"
+
+
+//尺寸类
+#import "UIViewExt.h"
+//新浪SDK
+#import "WeiboSDK.h"
+//系统AppDelegate
+#import "AppDelegate.h"
+//主题切换
+#import "ThemeManager.h"
+#import "ThemeImgView.h"//自定义ImageView
+#import "ThemeBtn.h"//按钮自动切换
+#import "ThemeLabel.h"
+
+//获取网络请求
+#import "DataService.h"
+//sd_webImage
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+//第三方工具WXlabel
+#import "WXLabel.h"
+//响应者链
+#import "UIView+ViewContorller.h"
+#import "UserModel.h"
+
+#define WB(isDetail) isDetail == NO ? 14 : 18
+#define R_WB(isDetail) isDetail == NO ? 12 : 16
+#define friendships @"hehe"
+
+
+
+//设置是否调试模式
+#ifdef DEBUG
+#else
+#define NSLog(...) ((void)0);
+#endif
+
+
+
+
+
+#endif

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3og-af-mRp" customClass="HeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="405"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSP-55-B3U">
+                    <rect key="frame" x="112" y="8" width="208" height="32"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="0Xk-qX-Xvf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DU-EN-YzI">
+                    <rect key="frame" x="112" y="59" width="235" height="39"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="Yu9-5u-1HV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XDP-I8-68S">
+                    <rect key="frame" x="8" y="8" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="LbF-qd-wTg"/>
+                        <constraint firstAttribute="height" constant="90" id="SIH-YQ-OnJ"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lde-e7-tdv" customClass="WeiboCellView">
+                    <rect key="frame" x="8" y="106" width="359" height="291"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="hSP-55-B3U" firstAttribute="top" secondItem="3og-af-mRp" secondAttribute="top" constant="8" id="4ns-da-yH5"/>
+                <constraint firstItem="2DU-EN-YzI" firstAttribute="top" secondItem="hSP-55-B3U" secondAttribute="bottom" constant="19" id="BDL-aL-2eI"/>
+                <constraint firstAttribute="bottom" secondItem="Lde-e7-tdv" secondAttribute="bottom" constant="8" id="CIE-7J-Ipq"/>
+                <constraint firstAttribute="trailing" secondItem="hSP-55-B3U" secondAttribute="trailing" constant="55" id="Dp2-V9-lwW"/>
+                <constraint firstAttribute="trailing" secondItem="2DU-EN-YzI" secondAttribute="trailing" constant="28" id="OiB-bj-ci2"/>
+                <constraint firstItem="Lde-e7-tdv" firstAttribute="top" secondItem="XDP-I8-68S" secondAttribute="bottom" constant="8" id="diL-YD-rAh"/>
+                <constraint firstItem="2DU-EN-YzI" firstAttribute="leading" secondItem="XDP-I8-68S" secondAttribute="trailing" constant="14" id="eXO-m1-Egv"/>
+                <constraint firstAttribute="trailing" secondItem="Lde-e7-tdv" secondAttribute="trailing" constant="8" id="jpW-DK-g4V"/>
+                <constraint firstItem="XDP-I8-68S" firstAttribute="leading" secondItem="3og-af-mRp" secondAttribute="leading" constant="8" id="k10-1O-J5X"/>
+                <constraint firstItem="hSP-55-B3U" firstAttribute="leading" secondItem="XDP-I8-68S" secondAttribute="trailing" constant="14" id="lJZ-mE-Jmr"/>
+                <constraint firstItem="XDP-I8-68S" firstAttribute="top" secondItem="3og-af-mRp" secondAttribute="top" constant="8" id="s9E-Sn-LC5"/>
+                <constraint firstItem="Lde-e7-tdv" firstAttribute="leading" secondItem="3og-af-mRp" secondAttribute="leading" constant="8" id="vLH-iE-aYb"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="_nameLabel" destination="hSP-55-B3U" id="AUf-zc-oEw"/>
+                <outlet property="_touxiangImgView" destination="XDP-I8-68S" id="yZR-5f-J9l"/>
+                <outlet property="_weiboView" destination="Lde-e7-tdv" id="whV-pW-R5i"/>
+                <outlet property="detailLabel" destination="2DU-EN-YzI" id="aSt-Ml-kJl"/>
+                <outlet property="weiboView" destination="Lde-e7-tdv" id="iAy-hb-axe"/>
+            </connections>
+            <point key="canvasLocation" x="239.5" y="132.5"/>
+        </view>
+    </objects>
+</document>
